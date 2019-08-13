@@ -1,0 +1,6 @@
+Iniciando um projeto de Lembretes web
+Com a intenção de se usar as seguintes ferramentas
+- Node Js
+- React Js
+- Express Js
+- MongoDB
