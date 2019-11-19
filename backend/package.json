@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "\"Backend for the webnotes app\"",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oraphaeldemelo/LembretesWeb.git"
+  },
+  "author": "Raphael de Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oraphaeldemelo/LembretesWeb/issues"
+  },
+  "homepage": "https://github.com/oraphaeldemelo/LembretesWeb#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}
