@@ -11,12 +11,12 @@ const getReminder = async (req, res) => {
 }
 
 const newReminder = async (req, res) => {
-    const { usuario, assunto, estado } = req.body;
-    try{
+    const { title, content, reminderDate } = req.body;
+    try{        
         const response = await db.query(`
-        INSERT INTO lembrete(usuario, assunto, dataCriacao, dataLembrete, estado)
-        VALUES ($1, $2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, $3) RETURNING *`,
-        [usuario, assunto, estado]);
+        INSERT INTO lembrete(titulo, conteudo, dataCriacao, dataLembrete, estado)
+        VALUES ($1, $2, CURRENT_TIMESTAMP, $3, 'ativo') RETURNING *`,
+        [title, content, reminderDate]);
         
         res.status(200).json(response.rows);    
     } catch ( err ) {
@@ -28,12 +28,12 @@ const newReminder = async (req, res) => {
 
 const updateReminder = async (req, res) => {
     const id = req.params.id;
-    const { usuario, assunto, estado } = req.body;
+    const { titulo, conteudo, estado } = req.body;
 
     try{
         const response = await db.query(`
-            UPDATE lembrete set usuario = $1, assunto = $2, estado = $3
-            WHERE id = $4 RETURNING * `, [ usuario, assunto, estado, id ]);
+            UPDATE lembrete set titulo = $1, conteudo = $2, estado = $3
+            WHERE id = $4 RETURNING * `, [ titulo, conteudo, estado, id ]);
 
         res.status(200).json(response.rows);
     } catch(e){
