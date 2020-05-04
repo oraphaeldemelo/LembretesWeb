@@ -1,0 +1,21 @@
+.card-body {
+  min-height: 100px;
+  min-width: 20px;
+  
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  width: 90%;
+  margin-bottom: 5rem;
+}
+
+div.container{
+  margin-top: 10px;
+}
+
+div.card{
+  width: 20rem;
+  margin-bottom: 2rem;
+}

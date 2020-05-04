@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './components/Menu'
 import FormReminder from './components/FormReminder'
+import Reminders from './components/Reminders'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <div className="main">
         <Menu />
         <FormReminder />
+        <Reminders />
       </div>
     </div>
   );

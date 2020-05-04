@@ -18,7 +18,7 @@ const FormReminder = () => {
             reminderDate: reminderDate,
             content: content,
         }
-        const response = await api.post('/reminder', values);
+        await api.post('/reminder', values);
         setTitle('');
         setReminderDate(new Date());
         setContent('');
